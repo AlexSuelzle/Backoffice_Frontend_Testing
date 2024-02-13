@@ -27,6 +27,5 @@ describe('Benutzer', () => {
         cy.get('.btn-group > .dropdown-toggle')
             .should('contain', 'Display')
             .click()
-        //Next I need explanation about check/uncheck
       })
 })
