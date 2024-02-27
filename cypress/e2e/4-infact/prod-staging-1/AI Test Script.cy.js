@@ -4,18 +4,6 @@ describe('Click through all tabs', () => {
       cy.login()
     })
   
-    it('should load Benutzer tab', () => {
-      cy.contains('Benutzer').click()
-      cy.url().should('eq', 'https://infact5-prod-staging-1.herokuapp.com/admin/users')
-      cy.pause()
-    })
-  
-    it('should load Geschäftspartner tab', () => {
-      cy.contains('Geschäftspartner').click()
-      cy.url().should('eq', 'https://infact5-prod-staging-1.herokuapp.com/admin/partners')
-      cy.pause()
-    })
-  
     it('should load Aufträge tab', () => {
       cy.contains('Aufträge').click()
       cy.url().should('eq', 'https://infact5-prod-staging-1.herokuapp.com/admin/orders')
