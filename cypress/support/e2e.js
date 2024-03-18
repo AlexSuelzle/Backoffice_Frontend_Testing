@@ -16,8 +16,11 @@
 // Import commands.js using ES2015 syntax:
 import './login'
 import './tabs'
-import './User'
+import './user'
 import './business_partner'
+import './settings'
+import './export'
+//import "cypress-real-events"
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

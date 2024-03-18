@@ -65,7 +65,7 @@ Cypress.Commands.add('UserViewDropdown', () => {
 Cypress.Commands.add('UserDelete', () => {
     cy.get('[id="remove-submit"]')
             .should('contain', 'Benutzer löschen')
-            .click()
+            .click({force: true})
     cy.url('https://infact5-prod-staging-2.herokuapp.com/admin/users') //user is deleted
 })
 

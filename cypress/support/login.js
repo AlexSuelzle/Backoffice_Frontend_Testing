@@ -8,3 +8,10 @@ Cypress.Commands.add('login', () => {
     cy.get('.btn').click()
     cy.log('Erfolgreich eingeloggt')
 })
+
+//Logout
+Cypress.Commands.add('logout', () => {
+    cy.get('[href="/sign_out"]')
+        .click()
+    cy.url('https://infact5-prod-staging-2.herokuapp.com/sign_in')
+})

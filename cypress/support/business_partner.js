@@ -8,7 +8,7 @@ Cypress.Commands.add('SearchBusinessPartner', () => {
         cy.get('[href="/admin/partners/M40124"]')
             .click()
         cy.url()
-            .should('eq', 'https://infact5-prod-staging-2.herokuapp.com/admin/partners/M40124')
+            .should('eq', '/admin/partners/M40124')
 })
 
 //Search the new business partner
@@ -21,7 +21,7 @@ Cypress.Commands.add('SearchNewBusinessPartner', () => {
     cy.get('a')
         .eq(22)
         .click()
-    cy.url('https://infact5-prod-staging-2.herokuapp.com/admin/partners/’')
+    cy.url('/admin/partners/’')
     cy.contains('Nutzer: Ringgemeinschaft')
 })
 
@@ -61,7 +61,7 @@ Cypress.Commands.add('NaturalPersonTab', () => {
 Cypress.Commands.add('BusinessPartnerCancel', () => {
     cy.get('[class="btn-close"]')
             .click()
-        cy.url('https://infact5-prod-staging-2.herokuapp.com/admin/partners')
+        cy.url('/admin/partners')
 })
 
 //create new business partner (legal entity)
