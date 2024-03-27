@@ -220,23 +220,4 @@ describe('Tools', () => {
             //.click() -> getting error message
         cy.reload()
     })
-
-    //in work
-    it('PDF Documents - Mittelstand Mahnungen - Zahlungserinnerung', () => {
-        cy.PDFButton() //export.js
-        cy.get('[href="/admin/pdf/viewer/businessdunning-firstreminderpdf"]')
-            .should('contain', 'Zahlungserinnerung')
-            .click()
-        cy.url('https://infact5-prod-staging-2.herokuapp.com/admin/pdf/viewer/businessdunning-firstreminderpdf')
-        cy.get('.embed-responsive-item') //Zahlungserinnerung-PDF
-        
-        //parameter
-        cy.get('[data-bs-target="#pdf-params"]')
-            .should('contain', 'Parameter')
-            .click()
-        cy.get('#pdf_params_locale') //language
-            .select('en')
-            .pause()
-        
-    })
 })

@@ -1,5 +1,5 @@
 describe('Benutzer', () => {
-    //Test
+
     beforeEach(() => {
         cy.login()
         cy.User() //tabs.js
